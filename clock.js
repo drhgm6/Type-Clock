@@ -1,8 +1,51 @@
 $('document').ready( function() {
 	var x = new Date();
 	displayTime(x.getHours(), x.getMinutes());
+	$('#header').html(parseMonth(x.getMonth()) + ' ' + x.getDate() + ', ' + x.getFullYear());
+
 });
 
+
+function parseMonth(month) {
+	switch (month) {
+		case 0:
+			return 'January';
+			break;
+		case 1:
+			return 'February';
+			break;
+		case 2:
+			return 'March';
+			break;
+		case 3:
+			return 'Apr';
+			break;
+		case 4:
+			return 'May';
+			break;
+		case 5:
+			return 'June';
+			break;
+		case 6:
+			return 'July';
+			break;
+		case 7:
+			return 'August';
+			break;
+		case 8:
+			return 'September';
+			break;
+		case 9:
+			return 'October';
+			break;
+		case 10:
+			return 'November';
+			break;
+		case 11:
+			return 'December';
+			break;
+	}
+}
 var hour = 0, minute =0;
 function timeToString(hour,minute) {
 	//var hour = time.getHours();
@@ -12,10 +55,7 @@ function timeToString(hour,minute) {
 	if (((60*hour + minute) > 690 ) && ((60*hour + minute) <= 750))
 		noonFlag = true;
 	if (((60*hour + minute) < 30) || ((60*hour + minute) >=  1410))
-		midnightFlag = true;
-	console.log (noonFlag, midnightFlag);
-	
-	
+		midnightFlag = true;	
 	//Begin process of setting time. 
 	if ((minute == 0) && (hour == 12))
 		return 'noon';
@@ -72,7 +112,6 @@ function timeToString(hour,minute) {
 	}
 	else if ((minute % 10 == 0) && (minute > 30)) {
 		var tmp = 60-minute;
-		console.log(tmp);
 		minutes = convertToString(tmp) + ' til';
 		if (hour == 11)
 			return minutes + ' noon';
@@ -99,8 +138,6 @@ function timeToString(hour,minute) {
 	
 }
 function timeToArray(hour,minute) {
-	//var hour = time.getHours();
-	//var minute = time.getMinutes();
 //Declaration of variables for this time
 	var upper =[], middle =[], lower =[];
 	var noonFlag = false, midnightFlag = false;
@@ -132,9 +169,9 @@ function timeToArray(hour,minute) {
 			middle.push('quarter');
 			middle.push('til');
 			if (hour == 11)
-				return [[], middle, [' noon']];
+				return [[], middle, ['noon']];
 			else if (hour == 23)
-				return [[], middle, [' midnight']];
+				return [[], middle, ['midnight']];
 			else
 				var tmp = (hour+1)%12;
 				lower.push(convertToString(tmp));
@@ -202,8 +239,7 @@ function timeToArray(hour,minute) {
 	return [upper, middle, lower];	
 }
 function convertToString(number) {
-	var tens = parseInt(parseInt(number)/10), ones = parseInt(parseInt(number) % 10), tensString = "", onesString = '';
-		
+	var tens = parseInt(parseInt(number)/10), ones = parseInt(parseInt(number) % 10), tensString = "", onesString = '';		
 	if (tens != 1) {
 		switch(ones) {
 			case 1: 
@@ -288,15 +324,12 @@ function convertToString(number) {
 		return tensString + onesString;
 	else
 		return tensString + '-' + onesString;
-
 }
 function displayTime(hour,minute) {
 	clear();
 	var arr = timeToArray(hour,minute);
-	console.log(arr);
 	for (var i=0; i < arr[0].length; i++) {
 		var tmp = '#top .' + arr[0][i];
-		console.log(tmp);
 		$(tmp).addClass('active');
 	}
 	for (var i=0; i < arr[1].length; i++) {

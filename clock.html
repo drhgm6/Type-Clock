@@ -1,238 +1,50 @@
 <html>
 <head>
 <style type="text/css">
-span, p {
-	margin:4px 5px;
-	font-weight:light;
+span, p { margin:4px 5px; font-weight:light; }
+.active { color:red; font-weight:bold; }
+body { font-family:monospace; color:#ddd; }
+
+#header, #main {
+	width:230px;
+}
+#header {
+	background-color:#ddd;
+	border-radius:8px 8px 0px 0px;
+	border: 1px solid black;
+	color:black;
+	text-align:center;
+	border-bottom:none;
+}
+#main {
+	border:1px solid black;
 }
 
-
-.active {
-	color:red;
-	font-weight:bold;
-}
-body {
-	font-family:monospace;
-	color:#ddd;
-}
 </style>
 <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="clock.js"></script>
 </head>
 <body>
+<div id="header"></div>
+<div id="main">
 <div id="top">
-<p>
-	<span class="thirty">T</span> 
-	<span class="thirty">H</span>
-	<span class="thirty">I</span>
-	<span class="thirty">R</span>
-	<span class="thirty">T</span>
-	<span class="thirty">Y</span>
-	<span class="">*</span>
-	<span class="fifty">F</span>
-	<span class="fifty">I</span>
-	<span class="fifty">F</span>
-	<span class="fifty">T</span>
-	<span class="fifty">Y</span></p>
-<p>
-	<span class="">*</span> 
-	<span class="forty">F</span>
-	<span class="forty">O</span>
-	<span class="forty">R</span>
-	<span class="forty">T</span>
-	<span class="forty">Y</span>
-	<span class="twelve">T</span>
-	<span class="twelve">W</span>
-	<span class="twelve">E</span>
-	<span class="twelve">L</span>
-	<span class="twelve">V</span>
-	<span class="twelve">E</span></p>
-<p>
-	<span class="twenty">T</span> 
-	<span class="twenty">W</span>
-	<span class="twenty">E</span>
-	<span class="twenty">N</span>
-	<span class="twenty ten">T</span>
-	<span class="twenty">Y</span>
-	<span class="seven six">S</span>
-	<span class="seven ten">E</span>
-	<span class="seven">V</span>
-	<span class="seven">E</span>
-	<span class="seven ten">N</span>
-	<span class="">*</span></p>
-<p>
-	<span class="eleven">E</span> 
-	<span class="eleven">L</span>
-	<span class="eleven">E</span>
-	<span class="eleven">V</span>
-	<span class="eleven">E</span>
-	<span class="eleven">N</span>
-	<span class="six">I</span>
-	<span class="">*</span>
-	<span class="four">F</span>
-	<span class="four">O</span>
-	<span class="four">U</span>
-	<span class="four">R</span></p>
-<p>
-	<span class="nine">N</span> 
-	<span class="nine">I</span>
-	<span class="nine">N</span>
-	<span class="nine">E</span>
-	<span class="">*</span>
-	<span class="">*</span>
-	<span class="six">X</span>
-	<span class="two">T</span>
-	<span class="two">W</span>
-	<span class="two one">O</span>
-	<span class="one">N</span>
-	<span class="one">E</span></p>
-<p>
-	<span class="five">F</span> 
-	<span class="five">I</span>
-	<span class="five">V</span>
-	<span class="five eight">E</span>
-	<span class="eight">I</span>
-	<span class="eight">G</span>
-	<span class="eight">H</span>
-	<span class="eight three">T</span>
-	<span class="three">H</span>
-	<span class="three">R</span>
-	<span class="three">E</span>
-	<span class="three">E</span></p>
-</div>	
+<p><span class="thirty">T</span><span class="thirty">H</span><span class="thirty">I</span><span class="thirty">R</span><span class="thirty">T</span><span class="thirty">Y</span><span class="">P</span><span class="fifty">F</span><span class="fifty">I</span><span class="fifty">F</span><span class="fifty">T</span><span class="fifty">Y</span></p>
+<p><span class="">B</span><span class="forty">F</span><span class="forty">O</span><span class="forty">R</span><span class="forty">T</span><span class="forty">Y</span><span class="twelve">T</span><span class="twelve">W</span><span class="twelve">E</span><span class="twelve">L</span><span class="twelve">V</span><span class="twelve">E</span></p>
+<p><span class="twenty">T</span><span class="twenty">W</span><span class="twenty">E</span><span class="twenty">N</span><span class="twenty ten">T</span><span class="twenty">Y</span><span class="seven six">S</span><span class="seven ten">E</span><span class="seven">V</span><span class="seven">E</span><span class="seven ten">N</span><span class="">J</span></p>
+<p><span class="eleven">E</span><span class="eleven">L</span><span class="eleven">E</span><span class="eleven">V</span><span class="eleven">E</span><span class="eleven">N</span><span class="six">I</span><span class="">G</span><span class="four">F</span><span class="four">O</span><span class="four">U</span><span class="four">R</span></p>
+<p><span class="nine">N</span><span class="nine">I</span><span class="nine">N</span><span class="nine">E</span><span class="">D</span><span class="">A</span><span class="six">X</span><span class="two">T</span><span class="two">W</span><span class="two one">O</span><span class="one">N</span><span class="one">E</span></p>
+<p><span class="five">F</span><span class="five">I</span><span class="five">V</span><span class="five eight">E</span><span class="eight">I</span><span class="eight">G</span><span class="eight">H</span><span class="eight three">T</span><span class="three">H</span><span class="three">R</span><span class="three">E</span><span class="three">E</span></p></div>
 <div id="middle">
-<p>
-	<span class="half">H</span> 
-	<span class="half">A</span>
-	<span class="half">L</span>
-	<span class="half">F</span>
-	<span class="oclock">O</span>
-	<span class="quarter">Q</span>
-	<span class="quarter">U</span>
-	<span class="quarter">A</span>
-	<span class="quarter">R</span>
-	<span class="quarter">T</span>
-	<span class="quarter">E</span>
-	<span class="quarter">R</span></p>
-<p>
-	<span class="til">T</span> 
-	<span class="til">I</span>
-	<span class="til">L</span>
-	<span class="past">P</span>
-	<span class="past">A</span>
-	<span class="past">S</span>
-	<span class="past">T</span>
-	<span class="oclock">C</span>
-	<span class="oclock">L</span>
-	<span class="oclock">O</span>
-	<span class="oclock">C</span>
-	<span class="oclock">K</span></p>
-</div>
+<p><span class="half">H</span><span class="half">A</span><span class="half">L</span><span class="half">F</span><span class="oclock">O</span><span class="quarter">Q</span><span class="quarter">U</span><span class="quarter">A</span><span class="quarter">R</span><span class="quarter">T</span><span class="quarter">E</span><span class="quarter">R</span></p>
+<p><span class="til">T</span><span class="til">I</span><span class="til">L</span><span class="past">P</span><span class="past">A</span><span class="past">S</span><span class="past">T</span><span class="oclock">C</span><span class="oclock">L</span><span class="oclock">O</span><span class="oclock">C</span><span class="oclock">K</span></p></div>
 <div id="bottom">
-<p>
-	<span class="forty">F</span>
-	<span class="forty oh">O</span>
-	<span class="forty">R</span>
-	<span class="forty">T</span>
-	<span class="forty">Y</span>
-	<span class="twelve">T</span>
-	<span class="twelve">W</span>
-	<span class="twelve">E</span>
-	<span class="twelve">L</span>
-	<span class="twelve">V</span>
-	<span class="twelve">E</span>
-	<span class="">*</span> </p>
-<p>
-	<span class="thirty thirteen">T</span> 
-	<span class="thirty thirteen oh">H</span>
-	<span class="thirty thirteen">I</span>
-	<span class="thirty thirteen">R</span>
-	<span class="thirty">T</span>
-	<span class="thirty">Y</span>
-	<span class="">*</span>
-	<span class="fifty fifteen">F</span>
-	<span class="fifty fifteen">I</span>
-	<span class="fifty fifteen">F</span>
-	<span class="fifty">T</span>
-	<span class="fifty">Y</span></p>
-
-<p>
-	<span class="twenty">T</span> 
-	<span class="twenty">W</span>
-	<span class="twenty">E</span>
-	<span class="twenty">N</span>
-	<span class="twenty ten">T</span>
-	<span class="twenty">Y</span>
-	<span class="seven six sixteen seventeen">S</span>
-	<span class="seven ten seventeen">E</span>
-	<span class="seven seventeen">V</span>
-	<span class="seven seventeen">E</span>
-	<span class="seven ten seventeen">N</span>
-	<span class="">*</span></p>
-<p>
-	<span class="eleven">E</span> 
-	<span class="eleven">L</span>
-	<span class="eleven">E</span>
-	<span class="eleven">V</span>
-	<span class="eleven">E</span>
-	<span class="eleven">N</span>
-	<span class="six sixteen">I</span>
-	<span class="">*</span>
-	<span class="four fourteen">F</span>
-	<span class="four fourteen">O</span>
-	<span class="four fourteen">U</span>
-	<span class="four fourteen">R</span></p>
-<p>
-	<span class="nine nineteen">N</span> 
-	<span class="nine nineteen">I</span>
-	<span class="nine nineteen">N</span>
-	<span class="nine nineteen">E</span>
-	<span class="">*</span>
-	<span class="">*</span>
-	<span class="six sixteen">X</span>
-	<span class="two">T</span>
-	<span class="two">W</span>
-	<span class="two one">O</span>
-	<span class="one">N</span>
-	<span class="one">E</span></p>
-<p>
-	<span class="five">F</span> 
-	<span class="five">I</span>
-	<span class="five">V</span>
-	<span class="five eight">E</span>
-	<span class="eight eighteen">I</span>
-	<span class="eight eighteen">G</span>
-	<span class="eight eighteen">H</span>
-	<span class="eight three eighteen">T</span>
-	<span class="three">H</span>
-	<span class="three">R</span>
-	<span class="three">E</span>
-	<span class="three">E</span></p>
-<p>
-	<span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen">T</span> 
-	<span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen">E</span>
-	<span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen">E</span>
-	<span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen noon">N</span>
-	<span class="noon">O</span>
-	<span class="noon">O</span>
-	<span class="noon">N</span>
-	<span class="">*</span>
-	<span class="">*</span>
-	<span class="">*</span>
-	<span class="">*</span>
-	<span class="am">A</span></p>
-<p>
-	<span class="midnight">M</span> 
-	<span class="midnight">I</span>
-	<span class="midnight">D</span>
-	<span class="midnight">N</span>
-	<span class="midnight">I</span>
-	<span class="midnight">G</span>
-	<span class="midnight">H</span>
-	<span class="midnight">T</span>
-	<span class="">*</span>
-	<span class="">*</span>
-	<span class="pm">P</span>
-	<span class="am pm">M</span></p>
-</div>							
+<p><span class="forty">F</span><span class="forty oh">O</span><span class="forty">R</span><span class="forty">T</span><span class="forty">Y</span><span class="twelve">T</span><span class="twelve">W</span><span class="twelve">E</span><span class="twelve">L</span><span class="twelve">V</span><span class="twelve">E</span><span class="">V</span></p>
+<p><span class="thirty thirteen">T</span><span class="thirty thirteen oh">H</span><span class="thirty thirteen">I</span><span class="thirty thirteen">R</span><span class="thirty">T</span><span class="thirty">Y</span><span class="">T</span><span class="fifty fifteen">F</span><span class="fifty fifteen">I</span><span class="fifty fifteen">F</span><span class="fifty">T</span><span class="fifty">Y</span></p>
+<p><span class="twenty">T</span><span class="twenty">W</span><span class="twenty">E</span><span class="twenty">N</span><span class="twenty ten">T</span><span class="twenty">Y</span><span class="seven six sixteen seventeen">S</span><span class="seven ten seventeen">E</span><span class="seven seventeen">V</span><span class="seven seventeen">E</span><span class="seven ten seventeen">N</span><span class="">M</span></p>
+<p><span class="eleven">E</span><span class="eleven">L</span><span class="eleven">E</span><span class="eleven">V</span><span class="eleven">E</span><span class="eleven">N</span><span class="six sixteen">I</span><span class="">C</span><span class="four fourteen">F</span><span class="four fourteen">O</span><span class="four fourteen">U</span><span class="four fourteen">R</span></p>
+<p><span class="nine nineteen">N</span><span class="nine nineteen">I</span><span class="nine nineteen">N</span><span class="nine nineteen">E</span><span class="">E</span><span class="">I</span><span class="six sixteen">X</span><span class="two">T</span><span class="two">W</span><span class="two one">O</span><span class="one">N</span><span class="one">E</span></p>
+<p><span class="five">F</span><span class="five">I</span><span class="five">V</span><span class="five eight">E</span><span class="eight eighteen">I</span><span class="eight eighteen">G</span><span class="eight eighteen">H</span><span class="eight three eighteen">T</span><span class="three">H</span><span class="three">R</span><span class="three">E</span><span class="three">E</span></p>
+<p><span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen">T</span><span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen">E</span><span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen">E</span><span class="thirteen fourteen fifteen sixteen seventeen eighteen nineteen noon">N</span><span class="noon">O</span><span class="noon">O</span><span class="noon">N</span><span class="">M</span><span class="">N</span><span class="">R</span><span class="">U</span><span class="am">A</span></p>
+<p><span class="midnight">M</span><span class="midnight">I</span><span class="midnight">D</span><span class="midnight">N</span><span class="midnight">I</span><span class="midnight">G</span><span class="midnight">H</span><span class="midnight">T</span><span class="">K</span><span class="">I</span><span class="pm">P</span><span class="am pm">M</span></p></div>							
+</div>
 </body></html>
